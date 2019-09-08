@@ -80,8 +80,8 @@ function css() {
 
 //Watch files
 function watchFiles() {
-    gulp.watch('./scss/**/*', css);
-    gulp.watch(['./css/*', './js/*'], browserSyncReload);
+//    gulp.watch('./scss/**/*', css);
+    gulp.watch('./css/*', browserSyncReload);
     gulp.watch('./**/*.html', browserSyncReload);
 }
 

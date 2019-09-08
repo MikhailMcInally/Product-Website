@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <!-- Google Fonts-->
+   <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400&display=swap" rel="stylesheet">
+    <!--  local style sheet -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!--  Dependencies  -->
+    <script src="https://kit.fontawesome.com/c145c9670b.js"></script>
+    <script src="css/simplelightbox.min.css"></script>
+    <title>Atomic forty seven</title>
 </head>
+
 <body>
-    
+
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo lora">Brand-Logo</h1>
+            <ul class="nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#home">Products</a></li>
+                <li><a href="#home">About</a></li>
+                <li><a href="#home">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/simple-lightbox.min.js"></script>
+    <script>
+        $(function() {
+            const $gallery = $('.gallary a').simpleLightbox();
+        })
+
+    </script>
 </body>
+
 </html>
