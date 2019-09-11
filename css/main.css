@@ -1,5 +1,8 @@
 /* Global */
 
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Karla|Rubik&display=swap');
+
 :root {
     /*  text colors  */
     --gray-100: #f8f9fa;
@@ -12,18 +15,21 @@
     --gray-800: #343a40;
     --gray-900: #212529;
     /*   primary colors */
-    --blue: #007bff !default;
-    --indigo: #6610f2 !default;
-    --purple: #6f42c1 !default;
-    --pink: #e83e8c !default;
-    --red: #dc3545 !default;
-    --orange: #fd7e14 !default;
-    --yellow: #ffc107 !default;
-    --green: #28a745 !default;
-    --teal: #0085A1 !default;
-    --cyan: #17a2b8 !default;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #0085A1;
+    --cyan: #17a2b8;
     /* applied colors */
     --overlay: rgba(0, 0, 0, 0.5);
+    /*  Fonts  */
+     --header-font: 'Karla', sans-serif;
+    --body-font: 'Rubik', sans-serif;
 }
 * {
     box-sizing: border-box;
@@ -31,7 +37,7 @@
     padding: 0;
 }
 body {
-    font-family: 'Merriweather', serif;
+    font-family: var(--body-font);
     line-height: 1.6;
     color: var(--gray-800);
     font-size: 1.25rem;
@@ -62,6 +68,7 @@ img {
 
 .navbar {
     font-size: 1.2rem;
+    min-height: 35vh;
 }
 
 .navbar .container {
@@ -71,6 +78,7 @@ img {
 
 .navbar .logo {
     font-size: 2rem;
+    font-family: var(--header-font);
 }
 
 .navbar .nav {
@@ -85,10 +93,6 @@ img {
     position: relative;
 }
 
-.navbar .nav a {
-    
-}
-
 .navbar .nav a:hover {
     color: var(--gray-800);
 }
@@ -100,7 +104,7 @@ img {
     height: 2px;
     width: 25%;
     opacity: 0;
-    background: var(--gray-700);
+    background: var(--indigo);
     transition: all ease-in-out 250ms;
 }
 
@@ -109,11 +113,64 @@ img {
     width: 100%;
 }
 
+/*  Masthead  */
+
+
+.masthead .inner-masthead {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.inner-masthead span {
+    padding-top: 0.5rem;
+}
+
+.inner-masthead span:hover {
+    color: var(--indigo);
+}
+
+/* Product Section */
+.product-display {
+    height: 600px;
+    margin-top: 2rem;
+    background-color: var(--gray-200);
+}
+
+.product-display .inner-product-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.product-display .inner-product-display h1{
+    padding-top: 1rem;
+}
+
+.product-display .inner-product-display h1::after {
+    content: '';
+    display: block;
+    position: relative;
+    margin-top: 0.1rem;
+    margin-left: 0.75rem;
+    width: 80%;
+    height: 5px;
+    background: var(--indigo);
+}
+
+
+
+
 
 /*utilities*/
+.thick-font-weight {
+    font-weight: 800;
+}
 
-.lora {
-    font-family: 'Lora', serif;
+.subtle-font-weight {
+    font-weight: 300;
 }
 
 /*media calls*/
