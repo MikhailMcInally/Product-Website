@@ -68,7 +68,7 @@ img {
 
 .navbar {
     font-size: 1.2rem;
-    min-height: 35vh;
+    min-height: 10vh;
 }
 
 .navbar .container {
@@ -76,9 +76,11 @@ img {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.navbar .logo {
+.navbar .container .logo {
     font-size: 2rem;
     font-family: var(--header-font);
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .navbar .nav {
@@ -91,6 +93,10 @@ img {
 .navbar .nav li {
     margin: 0 1rem;
     position: relative;
+}
+
+.navbar .nav a {
+    letter-spacing: 1.5px;
 }
 
 .navbar .nav a:hover {
@@ -115,6 +121,12 @@ img {
 
 /*  Masthead  */
 
+.masthead {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .masthead .inner-masthead {
     display: flex;
@@ -123,55 +135,169 @@ img {
     align-items: center;
 }
 
+.masthead .inner-masthead h1 {
+    font-weight: 700;
+    color: var(--gray-700);
+}
 
+.masthead .inner-masthead h5 {
+    font-weight: 500;
+    position: relative;
+    color: var(--gray-600);
+}
+
+.masthead .inner-masthead h5::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    opacity: .25;
+    background: var(--indigo);
+    transition: all 250ms;
+}
+
+.masthead .inner-masthead:hover h5::after {
+    width: 100%;
+    opacity: 1;
+}
+
+/* Temporary
+.masthead .inner-masthead:hover h1 {
+    color: var(--gray-800);
+}
+*/
+
+.masthead .inner-masthead:hover h5 {
+    color: var(--gray-800);
+}
 .inner-masthead span {
     padding-top: 0.5rem;
 }
 
-.inner-masthead span:hover {
-    color: var(--indigo);
+.masthead .inner-masthead:hover span {
+    animation: bounce;
+    animation-duration: 750ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
+
+@keyframes bounce {
+    0% {padding-top: 5rem}
+    100% {padding-top: 0.5rem}
+}
+
+.highlight {
+    color: var(--purple);
+}
+
 
 /* Product Section */
 .product-display {
-    height: 600px;
-    margin-top: 2rem;
     background-color: var(--gray-200);
 }
-
-.product-display .inner-product-display {
+.product-display .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 50px 0;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-}
-.product-display .inner-product-display h1{
-    padding-top: 1rem;
+    align-content: center;
+    flex-direction: column;
 }
 
-.product-display .inner-product-display h1::after {
+.product-display .product-header{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    padding-top: 50px;
+}
+
+.product-display .product-header::after{
+    content: "";
+    width: 175px;
+    height: 7.5px;
+    background-color: var(--indigo);
+    position: absolute;
+    border-radius: 5px;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.product-display .container .product-header::after {
     content: '';
     display: block;
-    position: relative;
-    margin-top: 0.1rem;
-    margin-left: 0.75rem;
-    width: 80%;
+    position: absolute;
+    width: 10%;
     height: 5px;
+    margin-top: 45px;
+    border-radius: 3rem;
     background: var(--indigo);
 }
 
+/* Card */
+
+
+.card {
+    width: 300px;
+    display: inline-block;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+    margin: 50px;
+    border-radius: 5px;
+    box-shadow: 2.5px 2.5px 15px rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+.card .image {
+    overflow: hidden;
+}
+
+.card .image img {
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: all 1s ease;
+}
+
+.card .image img:hover {
+    transform: scale(1.5);
+}
+
+.card .title {
+    text-align: center;
+    padding: 5px;
+}
+
+.card .desc {
+    text-align: center;
+}
+
+.card .btn {
+    background: var(--gray-300);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 5px 20px;
+    margin-bottom: 5px;
+    border-radius: 25px;
+    transition: 250ms;
+    cursor: pointer;
+}
+
+.card .btn:hover {
+    background: var(--indigo);
+    color: var(--gray-100);
+}
 
 
 
 
 /*utilities*/
-.thick-font-weight {
-    font-weight: 800;
-}
-
-.subtle-font-weight {
-    font-weight: 300;
-}
 
 /*media calls*/
 
@@ -181,5 +307,14 @@ img {
     }
     .navbar .nav li {
     margin: 0 2rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .product-display .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 }
