@@ -1,0 +1,44 @@
+
+
+
+
+t. make navbar float with scroll-down
+
+t. set masthead animation to play once
+
+t. add navbar ul items smooth-scroll effect
+
+t. deploy website
+
+t. hook up contact form to database
+
+t. create logo and pick color scheme
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

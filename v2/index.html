@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--  local style sheet -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!--  Dependencies  -->
+    <script src="https://kit.fontawesome.com/c145c9670b.js"></script>
+    <script src="css/simplelightbox.min.css"></script>
+    <title>Atomic forty seven</title>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Atomic</h1>
+            <ul class="nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#home">Products</a></li>
+                <li><a href="#home">About</a></li>
+                <li><a href="#home">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Showcase/Welcome Section -->
+    <section class="masthead">
+        <div class="container">
+            <div class="inner-masthead">
+                <h1>Welcome to Atomic Jewellry</h1>
+                <h5>The most whimsical designs and patterns</h5>
+                <span class='fa-stack'>
+                    <i class="fas fa-arrow-down fa-stack-1x"></i>
+                    <i class="far fa-circle fa-stack-2x"></i>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!--  Product Section  -->
+    <section class="product-display">
+        <h1 class="product-header">Products</h1>
+        <div class="container">
+            <div class="card">
+                <div class="image">
+                    <img src="./images/photo3.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h1>Title Name</h1>
+                </div>
+                <div class="desc">
+                    <p>write you're title description here</p>
+                    <button class="btn">
+                        Read More
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="./images/photo4.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h1>Title Name</h1>
+                </div>
+                <div class="desc">
+                    <p>write you're title description here</p>
+                    <button class="btn">
+                        Read More
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="./images/photo2.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h1>Title Name</h1>
+                </div>
+                <div class="desc">
+                    <p>write you're title description here</p>
+                    <button class="btn">
+                        Read More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  About us Section -->
+    <section class="information">
+        <div class="overlay"></div>
+        <h1 class="information-header">About Us</h1>
+        <div class="container">
+            <div class="box-wrapper">
+                <div class="about-box">
+                    <div class="inner-box">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti facere rem praesentium
+                            libero, autem debitis, adipisci magni necessitatibus neque exercitationem ea consectetur
+                            odit esse magnam!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="./images/photo6.jpg" class="author-image" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <!--  Contact Form  -->
+    <section class="contact-section">
+        <div class="container">
+            <h1 class="header"><span class="color">Atomic</span> Designs</h1>
+            <div class="wrapper">
+                <div class="company-information">
+                    <h3 class="brand">Atomic Designs</h3>
+                    <ul>
+                        <li>8700 Forest Grove Dr.</li>
+                        <li>235-881-2758</li>
+                        <li>mikhailmcinally@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="contact-form">
+                    <h3 class="form-header">Email Us</h3>
+                    <form action="">
+                        <div class="inner-wrapper form-inputs">
+
+                            <p>
+                                <label>Name</label>
+                                <input type="text" name="name">
+                            </p>
+                            <p>
+                                <label>Company</label>
+                                <input type="text" name="name">
+                            </p>
+                            <p>
+                                <label>Email Address</label>
+                                <input type="text" name="name">
+                            </p>
+                            <p>
+                                <label>Phone Number</label>
+                                <input type="text" name="name">
+                            </p>
+                        </div>
+                        <div class="msg-wrapper">
+                            <label>Message</label>
+                            <textarea name="msg" rows="5"></textarea>
+                            <div class="btn">submit</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--  footer  -->
+
+
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/simple-lightbox.min.js"></script>
+    <script>
+        $(function () {
+            const $gallery = $('.gallary a').simpleLightbox();
+        })
+
+    </script>
+</body>
+
+</html>
